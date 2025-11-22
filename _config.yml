@@ -17,8 +17,8 @@
 #---------------------------
 
 # 用于浏览器标签的图标
-# Icon for browser tab#浏览器标签的图标
-favicon   的图标: /img/fluid.png   标识:/ img / fluid.png
+# Icon for browser tab
+favicon: /img/fluid.png
 
 # 用于苹果设备的图标
 # Icon for Apple touch#苹果触摸的图标
@@ -30,7 +30,7 @@ tab_title_separator: " - "
 
 # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
 # Force all links to be HTTPS (applicable to HTTP mixed error)#强制所有链接为HTTPS（适用于HTTP混合错误）
-force_https: false   假
+force_https: false
 
 # 代码块的增强配置
 # Enhancements to code blocks增强代码块
@@ -129,8 +129,8 @@ fun_features:
 # Theme dark mode. If enable, a switch button will appear on the menu, each of the visitor's browser will store his switch option
 dark_mode:
   enable: true
-  # 默认的选项（当用户手动切换后则不再按照默认模式），选择 `auto` 会优先遵循 prefers-color-scheme，其次按用户本地时间 18 点到次日 6 点之间进入暗色模式
-  # Default option (when the visitor switches manually, the default mode is no longer followed), choosing `auto` will give priority to prefers-color-scheme, and then enter the dark mode from 18:00 to 6:00 in the visitor's local time
+  # 默认的选项（当用户手动切换后则不再按照默认模式），选择 `auto` 会优先遵循 prefers-color-scheme，其次按用户本地时间 18 点到次日 6 点之间进入暗色�[...]
+  # Default option (when the visitor switches manually, the default mode is no longer followed), choosing `auto` will give priority to prefers-color-scheme, and then enter the dark mode from 18:00 to [...]
   # Options: auto | light | dark
   default: auto
 
@@ -233,11 +233,11 @@ font:
 
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
-custom_js:
+custom_js: []
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
-custom_css:
+custom_css: []
 
 # 网页访问统计
 # Analysis of website visitors
@@ -335,8 +335,7 @@ lazyload:
 
 # 图标库，包含了大量社交类图标，主题依赖的不包含在内，因此可自行修改，详见 https://hexo.fluid-dev.com/docs/icon/
 # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
-iconfont: //at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
-
+iconfont: "//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css"
 
 #---------------------------
 # 页头
@@ -365,7 +364,7 @@ navbar:
     alpha: 0.7
 
   # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
-  # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
+  # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name`[...]
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
@@ -456,7 +455,7 @@ footer:
   statistics:
     enable: false
 
-    # 统计数据来源，使用 leancloud, umami 需要设置 `web_analytics` 中对应的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显示统计数据很大属于正常现象，部署后会正常
+    # 统计数据来源，使用 leancloud, umami 需要设置 `web_analytics` 中对应的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显�[...]
     # Data source. If use leancloud, umami, you need to set the parameter in `web_analytics`
     # Options: busuanzi | leancloud | umami
     source: "busuanzi"
@@ -521,8 +520,8 @@ index:
       # Request headers
       headers: {}
 
-      # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data', 'content']；如果返回是列表则自动选择第一项
-      # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
+      # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data',[...]
+      # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','conten[...]
       keys: []
 
   # 自动截取文章摘要
@@ -704,8 +703,8 @@ post:
   # Zoom feature of images
   image_zoom:
     enable: true
-    # 放大后图片链接替换规则，可用于将压缩图片链接替换为原图片链接，如 ['-slim', ''] 是将链接中 `-slim` 移除；如果想使用正则请使用 `re:` 前缀，如 ['re:\\d{3,4}\\/\\d{3,4}\\/', '']
-    # The image url replacement when zooming, the feature can be used to replace the compressed image to the original image, eg: ['-slim', ''] removes `-slim` from the image url when zooming; if you want to use regular, use prefix `re:`, eg: ['re:\\d{3,4}\\/\\d{3,4}\\/','']
+    # 放大后图片链接替换规则，可用于将压缩图片链接替换为原图片链接，如 ['-slim', ''] 是将链接中 `-slim` 移除；如果想使用正则请使用 `re:` 前缀，如 [...]
+    # The image url replacement when zooming, the feature can be used to replace the compressed image to the original image, eg: ['-slim', ''] removes `-slim` from the image url when zooming; if you w[...]
     img_url_replace: ['', '']
 
   # 脚注语法，会在文章底部生成脚注，如果 Markdown 渲染器本身支持，则建议关闭，否则可能会冲突
@@ -940,26 +939,26 @@ category:
 
   # 分类的排序字段，前面带减号是倒序，不带减号是正序
   # Sort field for categories, with a minus sign is reverse order
-  # Options: length | name
+  # Options: length | name#选项：长度|的名称
   order_by: "-length"
 
   # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在子分类则默认展开
-  # Collapse depth. If 0, all posts collapsed. If greater than 0, it will be expanded by default if there are subcategories
+  # Collapse depth. If 0, all posts collapsed. If greater than 0, it will be expanded by default if there are subcategories#塌陷深度。如果为0，则所有帖子都崩溃。如果大于0，则在存在子类别时默认展开
   collapse_depth: 0
 
   # 文章的排序字段，前面带减号是倒序，不带减号是正序
-  # Sort field for posts, with a minus sign is reverse order
-  # Options: date | title | or other field of front-matter
+  # Sort field for posts, with a minus sign is reverse order#排序字段的帖子，与负号是相反的顺序
+  # Options: date | title | or other field of front-matter#选项：日期|标题|或其他字段的前页内容
   post_order_by: "-date"
 
   # 单个分类中折叠展示文章数的最大值，超过限制会显示 More，0 则不限制
-  # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit
+  # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit#单个类别中帖子的最大数量。如果超过限制，将显示“更多”。如果0没有限制
   post_limit: 10
 
 
 #---------------------------
 # 标签页
-# Tag Page
+# Tag Page   #标签页
 #---------------------------
 tag:
   enable: true
@@ -969,14 +968,14 @@ tag:
   tagcloud:
     min_font: 15
     max_font: 30
-    unit: px
+    unit: px   单位:像素
     start_color: "#BBBBEE"
     end_color: "#337ab7"
 
 
 #---------------------------
 # 关于页
-# About Page
+# About Page   #关于页面
 #---------------------------
 about:
   enable: true
@@ -987,149 +986,15 @@ about:
   name: "Fluid"
   intro: "An elegant theme for Hexo"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
-  # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, the icon is no longer a link, but a hovering QR code
+  # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, the icon is no longer a link, but a hovering QR code#更多的图标可以从https://hexo.fluid-dev.com/docs/en/icon/找到‘ class ’是图标的css类。如果添加“qrcode”，图标不再是链接，而是一个悬停的QR码
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com", tip: "GitHub" }
-    - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
+    - { class: "iconfont icon-github-fill", link: "https://github.com", tip: "GitHub" }-{类：“iconfont icon-github-fill”，链接：“https://github.com”，提示：“GitHub”}
+    - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }-{类：“iconfont icon-douban-fill”，链接：“https://douban.com”，提示：“ ”}
     - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
 
 
 #---------------------------
 # 自定义页
-# Custom Page
+# Custom Page   #自定义页面
 #
-# 通过 hexo new page 命令创建的页面
-# Custom Page through `hexo new page`
-#---------------------------
-page:
-  banner_img: /img/default.png
-  banner_img_height: 60
-  banner_mask_alpha: 0.3
-
-
-#---------------------------
-# 404页
-# 404 Page
-#---------------------------
-page404:
-  enable: true
-  banner_img: /img/default.png
-  banner_img_height: 85
-  banner_mask_alpha: 0.3
-  # 重定向到首页的延迟(毫秒)
-  # Delay in redirecting to home page (milliseconds)
-  redirect_delay: 5000
-
-
-#---------------------------
-# 友链页
-# Links Page
-#---------------------------
-links:
-  enable: true
-  banner_img: /img/default.png
-  banner_img_height: 60
-  banner_mask_alpha: 0.3
-  # 友链的成员项
-  # Member item of page
-  items:
-    - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
-    }
-    - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
-    }
-    - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
-    }
-
-  # 当成员头像加载失败时，替换为指定图片
-  # When the member avatar fails to load, replace the specified image
-  onerror_avatar: /img/avatar.png
-
-  # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
-  # Custom content at the bottom of the links
-  custom:
-    enable: false
-    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
-
-  # 评论插件
-  # Comment plugin
-  comments:
-    enable: false
-    # 指定的插件，需要同时设置对应插件的必要参数
-    # The specified plugin needs to set the necessary parameters at the same time
-    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: disqus
-
-
-#---------------------------
-# 以下是配置 JS CSS 等静态资源的 URL 前缀，可以自定义成 CDN 地址，
-# 如果需要修改，最好使用与默认配置相同的版本，以避免潜在的问题，
-# ** 如果你不知道如何设置，请不要做任何改动 **
-#
-# Here is the url prefix to configure the static assets. Set CDN addresses you want to customize.
-# Be aware that you would better use the same version as default ones to avoid potential problems.
-# DO NOT EDIT THE FOLLOWING SETTINGS UNLESS YOU KNOW WHAT YOU ARE DOING
-#---------------------------
-
-static_prefix:
-  # 内部静态
-  # Internal static
-  internal_js: /js
-  internal_css: /css
-  internal_img: /img
-
-  anchor: https://lib.baomitu.com/anchor-js/5.0.0/主播:https://lib.baomitu.com/anchor-js/5.0.0/
-
-  github_markdown: https://lib.baomitu.com/github-markdown-css/4.0.0/
-
-  jquery: https://lib.baomitu.com/jquery/3.6.4/
-
-  bootstrap: https://lib.baomitu.com/twitter-bootstrap/4.6.1/引导:https://lib.baomitu.com/twitter-bootstrap/4.6.1/
-
-  prismjs: https://lib.baomitu.com/prism/1.29.0/
-
-  tocbot: https://lib.baomitu.com/tocbot/4.20.1/
-
-  typed: https://lib.baomitu.com/typed.js/2.0.12/输入:https://lib.baomitu.com/typed.js/2.0.12/
-
-  fancybox: https://lib.baomitu.com/fancybox/3.5.7/
-
-  nprogress: https://lib.baomitu.com/nprogress/0.2.0/nprogress: https://lib.baomitu.com
-progress/0.2.0/
-
-  mathjax: https://lib.baomitu.com/mathjax/3.2.2/
-
-  katex: https://lib.baomitu.com/KaTeX/0.16.2/
-
-  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/
-
-  clipboard: https://lib.baomitu.com/clipboard.js/2.0.11/剪贴板:https://lib.baomitu.com/clipboard.js/2.0.11/
-
-  mermaid: https://lib.baomitu.com/mermaid/8.14.0/美人鱼:https://lib.baomitu.com/mermaid/8.14.0/
-
-  valine: https://lib.baomitu.com/valine/1.5.1/缬氨酸:https://lib.baomitu.com/valine/1.5.1/
-
-  waline: https://registry.npmmirror.com/@waline/client/2.15.8/files/dist/
-
-  gitalk: https://lib.baomitu.com/gitalk/1.8.0/
-
-  disqusjs: https://lib.baomitu.com/disqusjs/1.3.0/
-
-  twikoo: https://lib.baomitu.com/twikoo/1.6.8/
-
-  discuss: https://lib.baomitu.com/discuss/1.2.1/讨论:https://lib.baomitu.com/discuss/1.2.1/
-
-  hint: https://lib.baomitu.com/hint.css/2.7.0/提示:https://lib.baomitu.com/hint.css/2.7.0/
-
-  moment: https://lib.baomitu.com/moment.js/2.29.4/时刻:https://lib.baomitu.com/moment.js/2.29.4/
+[...]
